@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 30000
+    renewal-threshold-update-interval-ms: 900000
+    expected-client-renewal-interval-seconds: 30
+  client:
+    register-with-eureka: false
+    fetch-registry: false
