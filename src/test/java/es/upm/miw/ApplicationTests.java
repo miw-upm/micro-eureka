@@ -2,12 +2,15 @@ package es.upm.miw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-class ApplicationTests {
+@ActiveProfiles("test")
+class ApplicationIT {
 
 	@Test
 	void contextLoads() {
+		// Empty
 	}
 
 }

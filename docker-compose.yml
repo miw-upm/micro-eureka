@@ -1,7 +1,7 @@
 services:
   eureka-server:
     build: .
-    image: eureka:v1
+    image: eureka:1.0.0
     container_name: eureka-server
     restart: always
     ports:
