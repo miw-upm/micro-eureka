@@ -50,12 +50,3 @@ jobs:
           tags: |
             ${{ env.GHCR_URL }}/${{ env.REPOSITORY }}:${{ env.VERSION }}
             ${{ env.GHCR_URL }}/${{ env.REPOSITORY }}:latest
-
-      - name: Deploy on Render
-        # En Render, en el servicio Web, Settings >> Deploy Hook >>  copiar el token de acceso
-        # En GitHub, en el repositorio, Settings >> Secrets and variables >> Actions >> definir la variable de entorno
-        # DEPLOY_HOOK_TOKEN con el token
-        run: |
-          curl --fail -X POST "https://api.render.com/deploy/${{ secrets.RENDER_DEPLOY_HOOK_TOKEN }}" \
-          && echo "Deployment succeeded" \
-          || (echo "Deployment failed" && exit 1)
