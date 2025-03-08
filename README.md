@@ -9,21 +9,22 @@
 ### :gear: Instalación del proyecto
 1. Clonar el repositorio en tu equipo, **mediante consola**:
 ```sh
-> cd <folder path>
-> git clone https://github.com/miw-upm/micro-eureka
+cd <folder path>
+git clone https://github.com/miw-upm/micro-eureka
 ```
 2. Importar el proyecto mediante **IntelliJ IDEA**  
    * **Open**, y seleccionar la carpeta del proyecto.
 
-### :gear: Ejecución en local co IntelliJ
+### :gear: Ejecución en local con IntelliJ
 * Ejecutar la clase **Application**
 ```sh
-> docker compose up --build -d
+docker compose up --build -d
 ```
-### :gear: Ejecución en local con Docker
+### :gear: Ejecución en local con Docker, debe tener la red _miw_ ya creada
 * Ejecutar en el proyecto la siguiente secuencia de comandos de Docker compose
 ```sh
-> docker compose up --build -d
+docker network create miw
+docker compose up --build -d
 ```
 
-* Cliente Web: `http://localhost:8761`
+* Cliente Web: http://localhost:8761
